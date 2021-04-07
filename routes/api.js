@@ -20,8 +20,9 @@ router.get('/', function(req, res, next) {
         response.on('end', () => {
             const body = JSON.parse(data);
             console.log(body);
+            res.render('apidata', {body});
         });
-        res.render('apidata', data);
+        //res.render('apidata', data);
          
     })
       
